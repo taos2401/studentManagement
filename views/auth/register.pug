@@ -1,0 +1,42 @@
+extends ../layout/common
+
+block css
+    link(rel="stylesheet", href="../../static/css/register.css")
+
+block content
+    .register
+            form(enctype="multipart/form-data" method="POST" action='/register')
+                h2.register-title REGISTER
+                .form-group
+                    input(type="text" id="name" name="name" value =values?values.name:"" required)
+                    label(for="name") Tên
+                    p.error= name
+                .form-group
+                    input(type="text" id="username" name="username" required)
+                    label(for="username") Username
+                    p.error= username
+                .form-group
+                    input(type="password" id="password" name="password" required)
+                    label(for="password") Password
+                    p.error= password
+                .form-group
+                    input(type="password" id="re-password" name="repassword" required)
+                    label(for="password") Re-Password
+                    p.error= repassword
+                .form-group
+                    input(type="email" id="email" name="email" required)
+                    label(for="email") Email
+                    p.error= email
+                .form-group
+                    input(type="text" id="phone" name="phone" required)
+                    label(for="phone") Phone
+                .form-group
+                    label(for="role-select")
+                    select(name="role" id="role-select") 
+                        option(value="student") Student
+                        option(value="teacher") Teacher
+                .form-group
+                    input(type="file" id="file" name="avatar")
+                input(type="submit", value="REGISTER",id="register")
+                .login Have an account?
+                    a(href="/login")  Login

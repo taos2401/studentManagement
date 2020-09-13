@@ -1,0 +1,262 @@
+:root {
+    --primary-color: rgba(63, 195, 128, 1);
+    --secondary-color: rgba(63, 195, 128, 1);
+    --font-color: black;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --shadow-color: #eeeeee;
+    --work-color: #eeeeee;
+    --work2-color: rgba(218, 223, 225, 1);
+    --border-color: black
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: white;
+    --bg-color: linear-gradient(to right, #29394b, #141E30);
+    --heading-color: white;
+    --shadow-color: #141E30;
+    --work-color: rgba(255, 255, 255, 0.1);
+    --work2-color: rgba(202, 202, 202, 0.07);
+    --border-color: white
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mid-content {
+    width: 85%;
+}
+
+.info-class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em 1em;
+    margin-bottom: 1em;
+}
+
+.info-teacher {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2.5em 1em;
+}
+
+.info-teacher img {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+}
+
+.info-class>*,
+.info-teacher>* {
+    font-size: 0.8em;
+}
+
+.name-class,
+.name-teacher {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#add-new-hw {
+    background-color: var(--primary-color);
+    padding: 1em 2em;
+    width: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+    display: none;
+    color: white;
+}
+
+.close-panel {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    top: 5px
+}
+
+.close-panel:hover {
+    transform: scale(1.2);
+}
+
+#add-new-hw form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#add-new-hw .title {
+    margin-bottom: 1em;
+}
+
+#add-new-hw .form-group {
+    margin-bottom: 1em;
+    width: 80%;
+    color: white;
+}
+
+#add-new-hw .form-group input {
+    width: 100%;
+    color: white;
+    border-bottom: 0.5px solid white;
+}
+
+#add-new-hw .form-group label {
+    color: white;
+}
+
+#add-new-hw input[type="submit"] {
+    margin-top: 0.8em;
+    color: white;
+}
+
+/* =====================HOMEWORK============================ */
+#homeworks {
+    margin-top: 1em;
+}
+
+.homework {
+    margin-bottom: 1em;
+    padding: 1em 1.5em;
+}
+
+/* .link-homework{
+    margin-top: 1em;
+} */
+
+.link-homework a {
+    text-decoration: none;
+}
+
+.link-homework a:hover {
+    opacity: 0.4;
+}
+
+.content-hw {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#student-hw-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0.8em;
+}
+
+#student-hw-form input[type="submit"] {
+    margin: 0;
+}
+
+/* ===================HOMEWORK EDIT===================== */
+.action-teacher {
+    margin-top: 1em;
+    display: none;
+    transition: all 1s ease-in;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-edit-active {
+    display: block;
+}
+
+.action div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-hw-edit {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--work2-color);
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    /* height: 0px; */
+    padding: 1em 1.5em;
+}
+
+.form-hw-edit .title {
+    margin-bottom: 2em;
+}
+
+.form-hw-edit .form-group {
+    width: 80%;
+}
+
+.form-hw-edit .form-group input {
+    width: 100%;
+}
+
+.form-hw-edit input[type="submit"] {
+    margin-top: 0em;
+}
+
+
+/* ===================Student homework================== */
+.student-homework {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--work2-color);
+    padding: 0.8em 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+/* .student-homework div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+} */
+
+.task-homework-student {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--work2-color);
+    padding: 0.8em 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    /* transition: height 1s ease-in; */
+    margin-top: 1em;
+}
+
+.homeworks-student {
+    overflow: hidden;
+    height: 4em;
+    transition: all 0.5s ease-in;
+}
+
+.task-homework-active {
+    transition: height 0.5s ease-in;
+    height: max-content
+}
+
+.task-homework-active i {
+    transition: all 0.4s ease-in;
+    transform: rotate(180deg);
+}

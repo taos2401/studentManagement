@@ -1,0 +1,68 @@
+:root {
+    --primary-color: rgba(63, 195, 128, 1);
+    --secondary-color: #536390;
+    --font-color: black;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --shadow-color: #eeeeee;
+    --work-color: #eeeeee;
+    --work2-color: rgba(189, 195, 199, 0.3);
+    --border-color: black
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: white;
+    /* --bg-color: #161625; */
+    --bg-color: linear-gradient(to right, #29394b, #141E30);
+    --heading-color: white;
+    --shadow-color: #141E30;
+    --work-color: rgba(255, 255, 255, 0.1);
+    --work2-color: rgba(202, 202, 202, 0.07);
+    --border-color: white
+}
+
+.all-class {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-class>.class {
+    background-color: var(--work-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    width: 85%;
+}
+
+.all-class>.class>.info-teacher {
+    background-color: var(--work2-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.class div:nth-child(3) {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--primary-color);
+}
+
+.class .class-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.class .info-teacher img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}

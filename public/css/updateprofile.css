@@ -1,0 +1,31 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updateinfo {
+    padding: 10px 40px;
+    margin-left: 8%;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+input[type="submit"] {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}

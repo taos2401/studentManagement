@@ -1,0 +1,49 @@
+extends ./layout/common2
+
+block css
+    link(rel="stylesheet", href="../static/css/class.css")
+
+block control
+    if role && checkteacher
+        .btn#btn-create-hw CREATE HOMEWORK
+        .btn#btn-delete-class DELETE CLASS
+
+block content
+    .mid-content
+        .info-class.work
+            .info-class-left
+                .name-class= "Class name: "+classes.name_class
+                .profile-class= "Class info: "+ classes.info_class
+            .info-class-rigth
+                .id-class= "Class ID: " +classes.id_class
+                .number-student= "Number of students "+ classes.numberstudent_class
+
+        .info-teacher.work
+            .info-teacher-left
+                img(src=classes.image_teacher)
+            .info-teacher-right
+                .name-teacher= "Name: " +classes.name_teacher
+                .email-teacher="Email: "+ classes.email_teacher
+                .phone-teacher= "Phone: "+classes.phone_teacher
+
+        #homeworks  
+            #all-homework
+                
+
+        #add-new-hw 
+            .btn.close-panel X
+            .task-panel
+                form#form-hw(method="post" enctype="multipart/form-data")
+                    .title CREATE HOMEWORK
+                    .form-group
+                        input(type="text" id="name-hw" name="name-hw" required)
+                        label(for="name-hw") Homework name
+                    .form-group
+                        input(type="text" id="score-hw" required)
+                        label(for="score-hw") Homework grade
+                    .form-group
+                        input(id="file-hw" type="file" name="homework")
+                    .error#error-create-hw
+                    input(type="submit" value="TẠO")
+
+    script(src="../static/js/class.js")

@@ -1,0 +1,30 @@
+extends ./layout/common2
+
+block css
+    link(rel="stylesheet", href="../../static/css/classIndex.css")
+
+block control
+    if userLogin.role == "teacher"
+        .btn#btn-create-class CREATE CLASS
+   
+block content
+    .all-class
+
+    .task-panel
+        #layer
+        .task-panel-create-class
+            .btn.close-panel X
+            .panel
+                h3 Add class
+                form#panel-class(method="post")
+                    .form-group
+                        input(type="text" name='name' id='class-name' required)
+                        label(for="class-name") Class name
+                    .form-group
+                        input(type="text" name="info" id="class-info" required)
+                        label(for="class-info") Class info
+                    .error.error-create-class
+
+                    input(type="submit" value="CREATE CLASS" id="create-class")    
+
+    script(src="../static/js/index.js")

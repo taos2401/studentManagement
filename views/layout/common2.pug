@@ -1,0 +1,52 @@
+html
+    head
+        link(rel="stylesheet", href="../../static/css/index.css")
+        link(rel="stylesheet", href="../../static/css/responsive.css")
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/710d2c5018.js" crossorigin="anonymous"></script>
+        block css
+        
+    body
+        .nav WELCOME
+        .home
+            #notify
+            .content-left
+                block content-left
+                .title Navigation
+                .user
+                    .avatar
+                        img(src=userLogin.image)
+                    .name= userLogin.name
+                    .info
+                        .mail=userLogin.email
+                        .phone=userLogin.phone
+                        .role=userLogin.role
+                .tab
+                    a(href="/" class="btn") HOME PAGE
+                    a(href="/users/"+userLogin.id class="btn") INFO
+                    a(href="/users/updateprofile/"+userLogin.id class="btn") CHANGE INFO     
+                    block control
+                    
+                    a(href="/logout" class="btn") LOG OUT
+
+            .content
+                block content
+
+            .content-right
+                block content-right
+                #role
+                    #student.btn Student
+                    #teacher.btn Teacher
+                #users
+
+        .theme-switch-wrapper
+            label.theme-switch(for="checkbox")
+                input#checkbox(type="checkbox")
+                .slider.round
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        script(src="../../static/js/changeTheme.js")
+        script(src="../../static/js/handleNotify.js")
+        <script src="../../static/js/getData.js"></script>
+
+    

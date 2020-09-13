@@ -1,0 +1,21 @@
+extends ../layout/common
+
+block css
+    link(rel="stylesheet", href="../../static/css/login.css")
+
+block content
+        .login
+            form(action='/login' method="post")
+                h2.login-title Welcome
+                p.login-leading Please login to the system!
+                .form-group
+                    input(type="text" id="username" name='username' required)
+                    label(for="username") Username
+                .form-group
+                    input(type="password" id="password" name="password" required)
+                    label(for="password") Password
+                p.error= error
+                input(type="submit", value="LOGIN >",id="login")
+                .register > Don't have an account? 
+                    a(href="/register") Register 
+        

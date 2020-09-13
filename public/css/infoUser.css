@@ -1,0 +1,245 @@
+:root {
+    --primary-color: rgba(63, 195, 128, 1);
+    ;
+    --secondary-color: rgba(63, 195, 128, 1);
+    --font-color: black;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --shadow-color: #eeeeee;
+    --work-color: #eeeeee;
+    --work2-color: rgba(218, 223, 225, 1);
+    --border-color: black
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: white;
+    /* --bg-color: #161625; */
+    --bg-color: linear-gradient(to right, #29394b, #141E30);
+    --heading-color: white;
+    --shadow-color: #141E30;
+    --work-color: rgba(255, 255, 255, 0.1);
+    --work2-color: rgba(202, 202, 202, 0.07);
+    --border-color: white
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-item {
+    padding: 2em 3em;
+    width: 85%;
+}
+
+.user-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user-item img {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.user-item .info .button-edit {
+    margin-top: 1em;
+}
+
+.user-item .info .button-edit a {
+    text-decoration: none;
+}
+
+.user-item .info .name {
+    margin-bottom: 1em;
+}
+
+.user-item .info .misize {
+    font-size: 0.8em;
+}
+
+.form-cmt {
+    width: 85%;
+}
+
+#form-cmt {
+    width: 100%;
+    display: flex;
+}
+
+#form-cmt input[type="submit"] {
+    margin-top: 0;
+    padding: 0 0;
+    margin-top: -3em;
+}
+
+.form-cmt input[type="text"] {
+    width: 28em;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid;
+    background-color: transparent;
+    margin-right: 2em;
+    margin-left: 0.5em;
+    margin-bottom: 3em;
+}
+
+.cmts {
+    width: 85%;
+}
+
+.cmts .cmt {
+    margin-bottom: 1em;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cmts .cmt .content-cmt {
+    font-size: 0.8em;
+}
+
+.cmt div:nth-child(1) {
+    width: 80%;
+}
+
+.cmt .form-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    display: none;
+}
+
+.cmt .form-group input[type="text"] {
+    width: 80%;
+    /* margin-top: 1em; */
+}
+
+.cmt .form-group input[type="submit"] {
+    margin: 0;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: 0.8em;
+    margin-left: 1em;
+}
+
+/* .cmt .form-group .cancel-edit-cmt{
+    padding: 0;
+    font-size: 0.65em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cmt .form-group .cancel-edit-cmt:hover{
+    opacity: 0.3;
+} */
+
+#view-more {
+    font-size: 0.8em;
+    margin-bottom: 3em;
+}
+
+
+/* ===============CLASS================== */
+
+
+
+#classes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    background-color: var(--work-color);
+    border-radius: 10px;
+    padding: 1em 0em;
+}
+
+.all-class {
+    width: 90%;
+    height: 3.4em;
+    overflow: hidden;
+}
+
+.class {
+    width: 100%;
+    background-color: var(--work2-color);
+    padding: 0.8em 2em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: var(--shadow-color);
+}
+
+.no-class {
+    width: 100%;
+    padding: 1em 2em;
+}
+
+#classes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin-top: 0.5em;
+}
+
+.class-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.teacher-action {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.class .info-teacher img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.class .info-teacher {
+    background-color: var(--work2-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.action-btn {
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.task-class {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: var(--work2-color);
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.task-class-active {
+    transition: height 0.5s ease-in;
+    height: max-content
+}
+
+.task-class-active i {
+    transition: all 0.2s ease-in;
+    transform: rotate(180deg);
+}

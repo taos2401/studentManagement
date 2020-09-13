@@ -1,0 +1,42 @@
+extends ./layout/common2
+
+block css
+    link(rel="stylesheet", href="../../static/css/updateprofile.css")
+
+block content
+    .updateinfo.work
+        form(enctype="multipart/form-data" method="POST" action='/users/updateprofile/'+user.id)
+            h2.title Update info
+            if mess
+                h3#mess(style="display:none")= mess
+            .form-group
+                if role
+                    input(type="text" id="name" name="name" value =user.name )
+                else
+                    input(type="text" id="name" name="name" value =user.name  disabled)
+                label(for="name") Name
+                p.error= name
+                
+            .form-group
+                if role
+                    input(type="text" id="username" name="username" value=user.username )
+                else
+                    input(type="text" id="username" name="username" value=user.username  disabled)
+                label(for="username") Username
+                p.error= username
+                p.error= error
+            .form-group
+                input(type="password" id="password" name="password" )
+                label(for="password") Password
+                p.error= password
+            .form-group
+                input(type="email" id="email" name="email" value=user.email )
+                label(for="email") Email
+                p.error= email
+            .form-group
+                input(type="text" id="phone" name="phone" value=user.phone )
+                label(for="phone") Phone
+            .form-group
+                input(type="file" id="file" name="avatar")
+            input(type="submit", value="Update",id="register")   
+    script(src="/static/js/updateInfo.js")     

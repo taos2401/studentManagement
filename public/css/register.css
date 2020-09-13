@@ -1,0 +1,109 @@
+body {
+    background-size: cover;
+}
+
+.home {
+    background: linear-gradient(to right, #29394b, #141e30);
+    opacity: 0.85;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+}
+
+.content-left {
+    width: 15%;
+}
+
+.content-right {
+    width: 0;
+}
+
+.register-title {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group input {
+    background-color: transparent;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid #eeeeee;
+    color: white;
+    font-size: 10px;
+    font-weight: 100;
+    transition: all 0.4s;
+}
+
+.form-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    pointer-events: none;
+    transition: all 0.5s;
+    color: white;
+}
+
+.form-group input:focus+label,
+.form-group input:valid+label {
+    top: -15px;
+    font-size: 9px;
+    left: -2px;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.5px solid #eeeeee;
+    color: white;
+}
+
+select option {
+    color: black;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: all 0.3s;
+    margin-bottom: 4px;
+}
+
+.login {
+    color: white;
+}
+
+.login a,
+.login {
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.login a {
+    font-style: italic;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #9A97F3;
+}
+
+input[type="submit"]:hover,
+.login a:hover {
+    opacity: 0.3;
+}
